@@ -4,17 +4,17 @@ using namespace std;
 // assending sort
 void insertionSort_increase1(int array[], int size)
 {
-    int key, j;
+    int key,check_index ;
     for (int i = 1; i < size; i++)
     {
         key = array[i];
-        j = i - 1;
-        while (j >= 0 && array[j] > key)
+        check_index = i - 1;
+        while (check_index >= 0 && array[check_index] > key)
         {
-            array[j + 1] = array[j];
-            j--;
+            array[check_index + 1] = array[check_index];
+            check_index--;
         }
-        array[j + 1] = key;
+        array[check_index + 1] = key;
     }
 }
 
@@ -22,16 +22,16 @@ void insertionSort_increase1(int array[], int size)
 // decreasing sort 
 void insertionSort_decrease(int array[], int size)
 {
-    int key, j;
+    int key, check_index;
     for (int i = 1; i < size; i++)
     {
         key = array[i];
-        j = i - 1;
-        while (j >= 0 && array[j] < key)
+        check_index = i - 1;
+        while (check_index >= 0 && array[check_index] < key)
         {
-            array[j + 1] = array[j];
-            j--;
+            array[check_index + 1] = array[check_index];
+            check_index--;
         }
-        array[j + 1] = key;
+        array[check_index + 1] = key;
     }
 }
